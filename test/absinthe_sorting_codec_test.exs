@@ -1,4 +1,4 @@
-defmodule AbsintheSortEncodeTest do
+defmodule AbsintheSortingCodecTest do
   @introspection_graphql Path.join([:code.priv_dir(:absinthe), "graphql", "introspection.graphql"])
 
   def introspection_graphql, do: @introspection_graphql
@@ -18,7 +18,7 @@ defmodule AbsintheSortEncodeTest do
   end
 
   test "it encodes an introspection query" do
-    sorted_json = AbsintheSortEncode.encode!(json_fixture("swapi.json"), pretty: true)
+    sorted_json = AbsintheSortingCodec.encode!(json_fixture("swapi.json"), pretty: true)
     sorted_json = sorted_json <> "\n"
     assert sorted_json == file_fixture("test_swapi.json")
   end
@@ -36,7 +36,7 @@ defmodule AbsintheSortEncodeTest do
 
     {:ok, result} = Absinthe.run(query, schema)
     result = result
-    |> AbsintheSortEncode.encode!(pretty: true)
+    |> AbsintheSortingCodec.encode!(pretty: true)
 
     Jason.decode!(result)
   end

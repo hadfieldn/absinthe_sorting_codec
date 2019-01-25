@@ -1,26 +1,26 @@
-defmodule AbsintheSortEncode do
+defmodule AbsintheSortingCodec do
 
   @moduledoc """
   Convert the json output of an introspection query into JSON with types sorted by name.
 
   ## Example
   ```
-  AbsintheSortEncode.encode!(Jason.decode!("swapi.json"))
+  AbsintheSortingCodec.encode!(Jason.decode!("swapi.json"))
   ```
 
   Can be used to convert an Absinthe schema to a sorted, deterministic ordering
-  by using AbsintheSortEncode as the JSON encoder.
+  by using AbsintheSortingCodec as the JSON encoder.
 
   ## Example
   ```
-  mix absinthe.schema.json --schema MySchema --json-codec AbsintheSortEncode
+  mix absinthe.schema.json --schema MySchema --json-codec AbsintheSortingCodec
   ```
 
   """
 
   @doc """
   Partial implementation of JSON codec, enough to satisfy Absinthe when passing
-  in AbsintheSortEncode as codec.
+  in AbsintheSortingCodec as codec.
 
   The schema passed in is the elixir representation of the json-result of an
   introspection query.
