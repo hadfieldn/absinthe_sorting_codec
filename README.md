@@ -10,7 +10,7 @@ Can convert the output of introspection queries in JSON format to a sorted, dete
 See the test fixtures.
 
 ### Example
-```
+```elixir
 AbsintheSortingCodec.encode!(Jason.decode!("swapi.json"))
 ```
 
