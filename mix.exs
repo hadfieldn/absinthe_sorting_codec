@@ -10,7 +10,8 @@ defmodule AbsintheSortingCodec.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       name: "Absinthe Sorting Codec",
-      description: "Codec for generating Absinthe JSON schemas in a deterministic format with alphabetically ordered type definitions",
+      description:
+        "Codec for generating Absinthe JSON schemas in a deterministic format with alphabetically ordered type definitions",
       package: [
         maintainers: ["Nathan Hadfield"],
         licenses: ["MIT"],
