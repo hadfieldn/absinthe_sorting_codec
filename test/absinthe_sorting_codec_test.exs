@@ -6,7 +6,7 @@ defmodule AbsintheSortingCodecTest do
   use ExUnit.Case
 
   test "it encodes a root query" do
-     assert run(TestQuerySchema) == json_fixture("test_query_schema.json")
+    assert run(TestQuerySchema) == json_fixture("test_query_schema.json")
   end
 
   test "it encodes a mutation" do
@@ -35,8 +35,10 @@ defmodule AbsintheSortingCodecTest do
     {:ok, query} = File.read(@introspection_graphql)
 
     {:ok, result} = Absinthe.run(query, schema)
-    result = result
-    |> AbsintheSortingCodec.encode!(pretty: true)
+
+    result =
+      result
+      |> AbsintheSortingCodec.encode!(pretty: true)
 
     Jason.decode!(result)
   end
