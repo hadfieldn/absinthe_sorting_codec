@@ -13,6 +13,7 @@ defmodule TestQuerySchema do
 
   @desc "An item"
   object :item do
+    field(:name, :string)
     @desc "Item field description"
     field(:item, non_null(:item), deprecate: "deprecated reason")
     field(:items, non_null(list_of(non_null(:item))))
@@ -22,7 +23,6 @@ defmodule TestQuerySchema do
     field(:time, :time)
     interface(:named_entity)
     interface(:timed_entity)
-    field(:name, :string)
     is_type_of(:timed_entity)
   end
 

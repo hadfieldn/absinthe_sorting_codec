@@ -1,4 +1,4 @@
-defmodule AbsintheSdl.MixProject do
+defmodule AbsintheSortingCodec.MixProject do
   use Mix.Project
 
   def project do
@@ -9,15 +9,15 @@ defmodule AbsintheSdl.MixProject do
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      name: "Absinthe SDL",
-      description: "Convert Absinthe Schemas to SDL",
+      name: "Absinthe Sorting JSON Encoder",
+      description: "Encode Absinthe schemas to JSON, with array objects sorted by value of 'name' key",
       package: [
-        maintainers: ["Maarten van Vliet"],
+        maintainers: ["Nathan Hadfield"],
         licenses: ["MIT"],
-        links: %{"GitHub" => "https://github.com/maartenvanvliet/absinthe_sdl"},
+        links: %{"GitHub" => "https://github.com/maartenvanvliet/absinthe_sort_encode"},
         files: ~w(LICENSE README.md lib mix.exs)
       ],
-      source_url: "https://github.com/maartenvanvliet/absinthe_sdl",
+      source_url: "https://github.com/hadfieldn/absinthe_sorting_codec",
       docs: [
         main: "readme",
         extras: ["README.md"]
@@ -43,8 +43,9 @@ defmodule AbsintheSdl.MixProject do
        branch: "master",
        override: true,
        only: [:test]},
-      {:jason, "~> 1.0.0", only: [:test]},
-      {:ex_doc, "~> 0.19.0", only: [:dev]}
+      {:jason, "~> 1.1.0"},
+      {:ex_doc, "~> 0.19.0", only: [:dev]},
+      {:mix_test_watch, "~> 0.8", only: [:test], runtime: false}
     ]
   end
 end
