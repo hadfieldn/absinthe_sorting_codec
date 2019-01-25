@@ -18,9 +18,9 @@ defmodule AbsintheSortingCodecTest do
   end
 
   test "it encodes an introspection query" do
-    sorted_json = AbsintheSortingCodec.encode!(json_fixture("swapi.json"), pretty: true)
-    sorted_json = sorted_json <> "\n"
-    assert sorted_json == file_fixture("test_swapi.json")
+    actual = sorted_json_fixture("swapi.json")
+    expected = file_fixture("test_swapi.json")
+    assert actual == expected
   end
 
   def file_fixture(file) do
@@ -31,15 +31,19 @@ defmodule AbsintheSortingCodecTest do
     File.read!("test/fixtures/json/" <> file) |> Jason.decode!()
   end
 
+  def sorted_json_fixture(file) do
+    file
+    |> json_fixture()
+    |> AbsintheSortingCodec.encode!(pretty: true)
+    |> Kernel.<>("\n")
+  end
+
   def run(schema) do
     {:ok, query} = File.read(@introspection_graphql)
-
     {:ok, result} = Absinthe.run(query, schema)
 
-    result =
-      result
-      |> AbsintheSortingCodec.encode!(pretty: true)
-
-    Jason.decode!(result)
+    result
+    |> AbsintheSortingCodec.encode!(pretty: true)
+    |> Jason.decode!()
   end
 end
