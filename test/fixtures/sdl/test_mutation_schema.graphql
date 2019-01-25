@@ -1,0 +1,18 @@
+schema {
+  query: RootQueryType
+  mutation: RootMutationType
+}
+
+input ContactInput {
+  name: Float! = 1.2
+  value: String!
+}
+
+type RootMutationType {
+  """Create a book"""
+  createBook(body: String! = "body", contact: ContactInput!, rating: Int, title: String!): String
+}
+
+type RootQueryType {
+
+}

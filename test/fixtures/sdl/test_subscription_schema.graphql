@@ -1,0 +1,16 @@
+schema {
+  query: RootQueryType
+  subscription: RootSubscriptionType
+}
+
+type Comment {
+  name: String
+}
+
+type RootQueryType {
+
+}
+
+type RootSubscriptionType {
+  commentAdded(repoName: String!): Comment
+}

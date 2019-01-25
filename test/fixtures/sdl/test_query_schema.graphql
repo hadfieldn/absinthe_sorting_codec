@@ -1,0 +1,47 @@
+schema {
+  query: RootQueryType
+}
+
+enum Color {
+  BLUE
+  GREEN @deprecated(reason: "no more green")
+  """reddish"""
+  RED
+}
+
+"""An item"""
+type Item implements TimedEntity, NamedEntity {
+  """Enum description"""
+  color: Color
+  """Item field description"""
+  item: Item! @deprecated(reason: "deprecated reason")
+  items: [Item!]!
+  name: String
+  """Custom scalar description"""
+  time: Time
+}
+
+interface NamedEntity {
+  name: String
+}
+
+type RootQueryType {
+  """An item"""
+  item(id: ID! = "abc"): Item
+  """Argument description"""
+  searchResult: [SearchResult]
+}
+
+"""A search result"""
+union SearchResult = Item | UnionItem
+
+"""Time (in ISOz format)"""
+scalar Time 
+
+interface TimedEntity {
+  time: Time
+}
+
+type UnionItem {
+  name: String
+}
