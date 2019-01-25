@@ -30,9 +30,7 @@ defmodule AbsintheSortingCodec do
     |> Jason.encode!(opts)
   end
 
-  def sort_schema(schema, opts \\ []) do
-    sorted_objects(schema)
-  end
+  defp sorted_objects(value)
 
   defp sorted_objects(map) when is_map(map) do
     for {key, val} <- map, into: %{}, do: {key, sorted_objects(val)}
@@ -44,10 +42,8 @@ defmodule AbsintheSortingCodec do
     |> Enum.map(&sorted_objects/1)
   end
 
+  defp sorted_objects(value), do: value
+
   defp list_sort_value(%{name: name}), do: name
   defp list_sort_value(_), do: ""
-
-  defp sorted_objects(value) do
-    value
-  end
 end
