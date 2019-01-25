@@ -3,18 +3,18 @@ defmodule AbsintheSortingCodec.MixProject do
 
   def project do
     [
-      app: :absinthe_sdl,
+      app: :absinthe_sorting_codec,
       version: "1.0.0",
       elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      name: "Absinthe Sorting JSON Encoder",
-      description: "Encode Absinthe schemas to JSON, with array objects sorted by value of 'name' key",
+      name: "Absinthe Sorting Codec",
+      description: "Codec for generating Absinthe JSON schemas in a deterministic format with alphabetically ordered type definitions",
       package: [
         maintainers: ["Nathan Hadfield"],
         licenses: ["MIT"],
-        links: %{"GitHub" => "https://github.com/maartenvanvliet/absinthe_sort_encode"},
+        links: %{"GitHub" => "https://github.com/hadfieldn/absinthe_sorting_codec"},
         files: ~w(LICENSE README.md lib mix.exs)
       ],
       source_url: "https://github.com/hadfieldn/absinthe_sorting_codec",
