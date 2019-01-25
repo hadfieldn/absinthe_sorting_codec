@@ -1,6 +1,6 @@
 # Absinthe Sorting Codec
 
-[![Build Status](https://travis-ci.com/hadfieldn/absinthe_sorting_codec.svg?branch=master)](https://travis-ci.com/hadfieldn/absinthe_sorting_codec) [![Hex pm](http://img.shields.io/hexpm/v/absinthe_sorting_codec.svg?style=flat)](https://hex.pm/packages/absinthe_sorting_codeec) [![Hex Docs](https://img.shields.io/badge/hex-docs-9768d1.svg)](https://hexdocs.pm/absinthe_sorting_codec) [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.com/hadfieldn/absinthe_sorting_codec.svg?branch=master)](https://travis-ci.com/hadfieldn/absinthe_sorting_codec) [![Hex pm](http://img.shields.io/hexpm/v/absinthe_sorting_codec.svg?style=flat)](https://hex.pm/packages/absinthe_sorting_codec) [![Hex Docs](https://img.shields.io/badge/hex-docs-9768d1.svg)](https://hexdocs.pm/absinthe_sorting_codec) [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 Convert the JSON output of an introspection query into a deterministic ordering of types (sorted by name).
 This results in saner diffs when committing schemas to version control.
