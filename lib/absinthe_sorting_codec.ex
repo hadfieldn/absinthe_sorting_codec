@@ -1,5 +1,4 @@
 defmodule AbsintheSortingCodec do
-
   @moduledoc """
   Convert the json output of an introspection query into JSON with types sorted by name.
 
@@ -38,13 +37,14 @@ defmodule AbsintheSortingCodec do
   defp sorted_objects(map) when is_map(map) do
     for {key, val} <- map, into: %{}, do: {key, sorted_objects(val)}
   end
+
   defp sorted_objects(list) when is_list(list) do
     list
     |> Enum.sort_by(&list_sort_value/1)
     |> Enum.map(&sorted_objects/1)
   end
 
-  defp list_sort_value(%{name: name }), do: name
+  defp list_sort_value(%{name: name}), do: name
   defp list_sort_value(_), do: ""
 
   defp sorted_objects(value) do
