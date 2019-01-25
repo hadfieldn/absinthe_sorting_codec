@@ -46,5 +46,5 @@ defmodule AbsintheSortingCodec do
   defp sorted_objects(value), do: value
 
   defp list_sort_value(%{name: name}), do: name
-  defp list_sort_value(_), do: ""
+  defp list_sort_value(value), do: value
 end
