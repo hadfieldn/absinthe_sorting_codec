@@ -20,7 +20,7 @@ erl_crash.dump
 *.ez
 
 # Ignore package tarball (built via "mix hex.build").
-absinthe_sdl-*.tar
+absinthe_sort_encode-*.tar
 
 /.idea
 /absinthe_sort_encode.iml
