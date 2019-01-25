@@ -26,7 +26,7 @@ mix absinthe.schema.json --schema MySchema --json-codec AbsintheSortingCodec --p
 **NOTE:** If the mix command gives the following error -- 
 
 ```bash
-(Argument Error) you atttempted to apply :module on "AbsnitheSortingCodec". If you are using apply/3, make sure the module is an atom. If you are using the dot syntax, such as map.field or module.function, make sure the left side of the dot is an atom or a map
+(Argument Error) you atttempted to apply :module on "AbsintheSortingCodec". If you are using apply/3, make sure the module is an atom. If you are using the dot syntax, such as map.field or module.function, make sure the left side of the dot is an atom or a map
 ``` 
 
 -- you may need to upgrade to Absinthe 1.5 or later. See https://github.com/absinthe-graphql/absinthe/pull/605
