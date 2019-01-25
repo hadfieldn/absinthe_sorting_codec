@@ -24,17 +24,17 @@ mix absinthe.schema.json --schema MySchema --json-codec AbsintheSdl
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `absinthe_sdl` to your list of dependencies in `mix.exs`:
+by adding `absinthe_sort_encode` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:absinthe_sdl, "~> 1.0.0"}
+    {:absinthe_sort_encode, "~> 1.0.0"}
   ]
 end
 ```
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/absinthe_sdl](https://hexdocs.pm/absinthe_sdl).
+be found at [https://hexdocs.pm/absinthe_sort_encode](https://hexdocs.pm/absinthe_sdl).
 
