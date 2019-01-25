@@ -1,4 +1,4 @@
-# AbsintheSortingCodec
+# Absinthe Sorting Codec
 
 [![Build Status](https://travis-ci.com/hadfieldn/absinthe_sorting_codec.svg?branch=master)](https://travis-ci.com/hadfieldn/absinthe_sorting_codec) [![Hex pm](http://img.shields.io/hexpm/v/absinthe_sorting_codec.svg?style=flat)](https://hex.pm/packages/absinthe_sorting_codeec) [![Hex Docs](https://img.shields.io/badge/hex-docs-9768d1.svg)](https://hexdocs.pm/absinthe_sorting_codec) [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
@@ -26,8 +26,7 @@ mix absinthe.schema.json --schema MySchema --json-codec AbsintheSortingCodec --p
 **NOTE:** If the mix command gives the following error -- 
 
 ```
-(Argument Error) you atttempted to apply :module on "AbsnitheSortingCodec". If you are using apply/3, make 
-sure the module is an atom. If you are using the dot syntax, such as map.field or module.function, make sure the left side of the dot is an atom or a map
+(Argument Error) you atttempted to apply :module on "AbsnitheSortingCodec". If you are using apply/3, make sure the module is an atom. If you are using the dot syntax, such as map.field or module.function, make sure the left side of the dot is an atom or a map
 ``` 
 
 -- you may need to upgrade to Absinthe 1.5 or later. See https://github.com/absinthe-graphql/absinthe/pull/605
@@ -35,19 +34,19 @@ sure the module is an atom. If you are using the dot syntax, such as map.field o
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `absinthe_sort_encode` to your list of dependencies in `mix.exs`:
+by adding `absinthe_sorting_codec` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:absinthe_sort_encode, "~> 1.0.0"}
+    {:absinthe_sorting_codec, "~> 1.0.0"}
   ]
 end
 ```
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/absinthe_sorting_codec](https://hexdocs.pm/absinthe_sdl).
+be found at [https://hexdocs.pm/absinthe_sorting_codec](https://hexdocs.pm/absinthe_sorting_codec).
 
 ## Attribution
 

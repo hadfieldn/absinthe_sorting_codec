@@ -10,11 +10,11 @@ use Mix.Config
 
 # You can configure your application as:
 #
-#     config :absinthe_sort_encode, key: :value
+#     config :absinthe_sorting_codec, key: :value
 #
 # and access this configuration in your application as:
 #
-#     Application.get_env(:absinthe_sort_encode, :key)
+#     Application.get_env(:absinthe_sorting_codec, :key)
 #
 # You can also configure a 3rd-party app:
 #
