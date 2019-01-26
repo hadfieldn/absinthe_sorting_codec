@@ -39,12 +39,13 @@ defmodule AbsintheSortingCodec do
 
   defp sorted_objects(list) when is_list(list) do
     list
-    |> Enum.sort_by(&list_sort_value/1)
+    |> Enum.sort_by(&list_sorting_value/1)
     |> Enum.map(&sorted_objects/1)
   end
 
   defp sorted_objects(value), do: value
 
-  defp list_sort_value(%{name: name}), do: name
-  defp list_sort_value(value), do: value
+  defp list_sorting_value(%{name: name}), do: name
+  defp list_sorting_value(%{"name" => name}), do: name
+  defp list_sorting_value(value), do: value
 end
