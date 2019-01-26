@@ -25,10 +25,18 @@ defmodule AbsintheSortingCodec do
 
   Uses [Jason](https://github.com/michalmuskala/jason) for encoding into JSON.
   """
-  def encode!(schema, opts \\ []) do
+
+  def encode(schema, opts \\ []) do
     schema
     |> sorted_objects()
-    |> Jason.encode!(opts)
+    |> Jason.encode(opts)
+  end
+
+  def encode!(schema, opts \\ []) do
+    case encode(schema, opts) do
+      {:ok, content} -> content
+      {:error, reason} -> raise reason
+    end
   end
 
   defp sorted_objects(value)
