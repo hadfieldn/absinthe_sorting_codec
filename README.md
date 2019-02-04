@@ -20,7 +20,7 @@ encoder.
 
 ### Example
 ```bash
-mix absinthe.schema.json --schema MySchema --json-codec AbsintheSortingCodec --pretty true
+mix absinthe.schema.json --schema MySchema --json-codec AbsintheSortingCodec --pretty
 ```
 
 **NOTE:** If the mix command gives the following error -- 
@@ -29,7 +29,7 @@ mix absinthe.schema.json --schema MySchema --json-codec AbsintheSortingCodec --p
 (Argument Error) you atttempted to apply :module on "AbsintheSortingCodec". If you are using apply/3, make sure the module is an atom. If you are using the dot syntax, such as map.field or module.function, make sure the left side of the dot is an atom or a map
 ``` 
 
--- you need to upgrade to Absinthe 1.5 or later. See [bug fix](https://github.com/absinthe-graphql/absinthe/pull/605).
+-- you need to upgrade to Absinthe [1.4.14](https://github.com/absinthe-graphql/absinthe/pull/605) or [1.5](https://github.com/absinthe-graphql/absinthe/pull/605) or later. 
 
 ## Installation
 
