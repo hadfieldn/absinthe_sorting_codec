@@ -20,7 +20,7 @@ encoder.
 
 ### Example
 ```bash
-mix absinthe.schema.json --schema MySchema --json-codec AbsintheSortingCodec --pretty true
+mix absinthe.schema.json --schema MySchema --json-codec AbsintheSortingCodec --pretty
 ```
 
 **NOTE:** If the mix command gives the following error -- 
