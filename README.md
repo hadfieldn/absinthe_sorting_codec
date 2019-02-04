@@ -39,7 +39,7 @@ by adding `absinthe_sorting_codec` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:absinthe_sorting_codec, "~> 1.0.0"}
+    {:absinthe_sorting_codec, "~> 1.0.1"}
   ]
 end
 ```
