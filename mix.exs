@@ -39,13 +39,9 @@ defmodule AbsintheSortingCodec.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:absinthe,
-       git: "https://github.com/absinthe-graphql/absinthe.git",
-       branch: "master",
-       override: true,
-       only: [:test]},
-      {:jason, "~> 1.1.0"},
-      {:ex_doc, "~> 0.19.0", only: [:dev]},
+      {:absinthe, ">= 1.5.0", only: [:test]},
+      {:jason, "~> 1.1"},
+      {:ex_doc, "~> 0.19", only: [:dev]},
       {:mix_test_watch, "~> 0.8", only: [:test], runtime: false}
     ]
   end
