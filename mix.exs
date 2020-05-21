@@ -44,8 +44,8 @@ defmodule AbsintheSortingCodec.MixProject do
        branch: "master",
        override: true,
        only: [:test]},
-      {:jason, "~> 1.1.0"},
-      {:ex_doc, "~> 0.19.0", only: [:dev]},
+      {:jason, "~> 1.1"},
+      {:ex_doc, "~> 0.19", only: [:dev]},
       {:mix_test_watch, "~> 0.8", only: [:test], runtime: false}
     ]
   end
